@@ -1,11 +1,11 @@
 // +
 namespace CSCI374
-    
+
 module RegularExpressions =
-    
+
     open System.Text.RegularExpressions // Load regular expression namespace (library)
 
-     let tester input test results =
+    let tester input test results =
         let rx = Regex(input, RegexOptions.Compiled ||| RegexOptions.Multiline)
         let ms = rx.Matches(test)
         //printfn "%A" ms
@@ -31,8 +31,8 @@ module RegularExpressions =
 
     let match06 input =
         tester input """The quick brown fox jumps over the lazy dog.
-                        The quick brown fox jumps over the lazy dog. 
-                        The quick brown fox jumps over the lazy dog 
+                        The quick brown fox jumps over the lazy dog.
+                        The quick brown fox jumps over the lazy dog
                      """ ["dog."]
 
     let match07 input =
@@ -46,7 +46,7 @@ module RegularExpressions =
 
     let match10 input =
         tester input "Mr.Dow Ms.Black Dr.Smith_sd Ds.Smith Mrs. White Mrs.White Er.Gray" ["Mr.Dow"; "Ms.Black"; "Dr.Smith"; "Mrs.White"; "Er.Gray"]
-        
+
     let match11 input =
         tester input """
                         129-129-11310
@@ -55,7 +55,7 @@ module RegularExpressions =
                         129-12-1031
                         12-129-1031
                     """ ["129-12-1031"]
-                    
+
     let match12 input =
         tester input """
                         <i> This is a paragraph</i>
