@@ -263,7 +263,7 @@ Grammar:
 
 ```
 S -> bU | ad | d
-U -> Ufab | VSc | bS
+U -> Ufab | Vc | b
 V -> fad | f | Ua
 ```
 
